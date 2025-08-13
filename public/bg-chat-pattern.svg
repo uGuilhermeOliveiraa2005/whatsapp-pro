@@ -1,0 +1,22 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="doodle-pattern" patternUnits="userSpaceOnUse" width="400" height="400">
+      <style>
+        .doodle {
+          stroke: rgba(255, 255, 255, 0.08); /* Cor dos ícones - um branco bem sutil */
+          stroke-width: 1.5;
+          fill: none;
+        }
+      </style>
+
+      <path class="doodle" d="M250,50 C 290,20 350,60 350,110 C 350,170 290,200 250,240 C 210,200 150,170 150,110 C 150,60 210,20 250,50 Z" transform="translate(-150, 150) scale(0.3)" />
+
+      <path class="doodle" d="M100,10 A90,90 0 1,1 99.9,10.1 M50,70 A20,20 0 1,0 50,70.1 M150,70 A20,20 0 1,0 150,70.1" transform="translate(200, 250) scale(0.3)" />
+
+      <path class="doodle" d="M100,10 L123,77 L195,77 L136,121 L159,189 L100,145 L41,189 L64,121 L5,77 L77,77 Z" transform="translate(50, 50) scale(0.25)" />
+
+    </pattern>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#doodle-pattern)" />
+</svg>
