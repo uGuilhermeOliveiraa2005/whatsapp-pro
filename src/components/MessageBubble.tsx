@@ -1,9 +1,9 @@
-// src/components/MessageBubble.tsx
+// src/components/MessageBubble.tsx (versão corrigida)
 import { cn } from "@/lib/utils";
 import { Message } from "@/types";
 
-// Usamos Pick para pegar apenas as propriedades que este componente precisa
-interface MessageBubbleProps extends Pick<Message, 'text' | 'time' | 'sentBy'> {}
+// A correção está aqui: Trocamos 'interface ... extends' por 'type ... ='
+type MessageBubbleProps = Pick<Message, 'text' | 'time' | 'sentBy'>;
 
 export function MessageBubble({ text, time, sentBy }: MessageBubbleProps) {
   const isSentByMe = sentBy === 'me';
@@ -18,7 +18,7 @@ export function MessageBubble({ text, time, sentBy }: MessageBubbleProps) {
         }
       )}
     >
-      <p className="text-white">{text}</p>
+      <p className="text-white break-words">{text}</p>
       <p className="text-xs text-zinc-400 self-end mt-1">{time}</p>
     </div>
   );
